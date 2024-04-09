@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class Sach {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+  }
+}
+let danhSachSach = [
+  new Sach(1, "Harry Potter"),
+  new Sach(2, "Chi Dau"),
+  new Sach(3, "Nang Tien Ca")
+];
+
+function timKiemSachTheoID(id) {
+  let sachTimDuoc = danhSachSach.find((sach) => sach.id === id);
+  if (sachTimDuoc) {
+    console.log("ID sách:", sachTimDuoc.id);
+    console.log("Tên sách:", sachTimDuoc.name);
+  } else {
+    console.log("Không tìm thấy sách với ID:", id);
+  }
+}
+
+timKiemSachTheoID(2); 
+timKiemSachTheoID(4); 
+
+    </script>
+</body>
+</html>

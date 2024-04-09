@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+class LopHoc {
+  constructor(id, number) {
+    this.id = id;
+    this.number = number;
+  }
+}
+
+let danhSachLopHoc = [
+  new LopHoc(1, 25),
+  new LopHoc(2, 35),
+  new LopHoc(3, 45),
+  new LopHoc(4, 55)
+];
+
+let mangMoi = danhSachLopHoc.map((lopHoc) => {
+  if (lopHoc.number < 30) {
+    return new LopHoc(lopHoc.id, lopHoc.number + 10);
+  } else if (lopHoc.number > 40) {
+    return new LopHoc(lopHoc.id, lopHoc.number - 10);
+  } else {
+    return lopHoc;
+  }
+});
+
+console.log(mangMoi);
+
+
+    </script>
+</body>
+</html>

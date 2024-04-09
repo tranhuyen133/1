@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let employees = [
+            { id: 1, name: 'Hoa', age: 25, department: 'IT' },
+            { id: 2, name: 'Binh', age: 20, department: 'IT' },
+            { id: 3, name: 'Chi', age: 25, department: 'Marketing' },
+            { id: 4, name: 'Dinh', age: 35, department: 'IT' },
+            { id: 5, name: 'Nga', age: 30, department: 'HR' }
+        ];
+
+        let youngerThan25 = employees.filter(employee => employee.age < 25);
+
+        console.log(youngerThan25);
+
+    </script>
+</body>
+
+</html>

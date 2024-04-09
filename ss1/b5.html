@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class TaiKhoan {
+  constructor(userName, password) {
+    this.userName = userName;
+    this.password = password;
+  }
+}
+
+let danhSachTaiKhoan = [
+  new TaiKhoan("Thu Ha", "zxcv"),
+  new TaiKhoan("Mai Nga", "8907"),
+  new TaiKhoan("Tran Lap", "123456"),
+  new TaiKhoan("An Hanh", "qwerty")
+];
+
+let indexTaiKhoanCoDauCach = danhSachTaiKhoan.findIndex((taiKhoan) => taiKhoan.password.includes(" "));
+if (indexTaiKhoanCoDauCach !== -1) {
+  console.log("Tài khoản có password chứa dấu cách ở vị trí:", indexTaiKhoanCoDauCach);
+} else {
+  console.log("Không có tài khoản nào có password chứa dấu cách.");
+}
+
+// In ra mọi tài khoản hợp lệ (không chứa dấu cách trong password)
+console.log("Tài khoản hợp lệ:");
+danhSachTaiKhoan.forEach((taiKhoan, index) => {
+  if (!taiKhoan.password.includes(" ")) {
+    console.log(`Vị trí: ${index}, UserName: ${taiKhoan.userName}, Password: ${taiKhoan.password}`);
+  }
+});
+
+    </script>
+</body>
+</html>
